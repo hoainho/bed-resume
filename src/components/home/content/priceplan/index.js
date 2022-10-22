@@ -1,4 +1,4 @@
-import React from "react";
+import {React,useState} from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faXmark } from '@fortawesome/free-solid-svg-icons';
 
@@ -44,7 +44,7 @@ function PricePlan(){
               </p>
             </div>
 
-            <div className="col-span-1 border-0 bg-bed_text w-72 h-80 p-9 relative">
+            <div className="col-span-1 border-0 bg-bed_text w-72 h-80 p-9 relative overflow-hidden">
               <p className="text-black  text-sm text-center bg-yellow-400 w-28 h-9 flex items-center justify-center rotate-45 top-5 left-52 absolute">
                 POPULAR
               </p>

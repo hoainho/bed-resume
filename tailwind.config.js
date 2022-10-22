@@ -118,6 +118,13 @@ module.exports = {
       boxShadow: {
         "layout-header": "0px 4px 10px rgba(0, 0, 0, 0.15)",
       },
+      backgroundImage:{
+          'bg-img-banner':"url(assets/images/imgbanner.jpg)",
+      },
+      zIndex:{
+        '1':'1',
+        '2':'2'
+      },
       maxWidth: {
         "294px": "294px",
       },
