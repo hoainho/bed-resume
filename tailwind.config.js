@@ -57,6 +57,13 @@ module.exports = {
         bed_darkgray: "#868686",
         bed_text_header: "#7D7D7D",
         bed_bg_download: "#E4F2FF",
+        grey:" #FFFFFF",
+        bg_gray:"#383846",
+        bg_gray_blue:'#383846',
+        bg_gray_black:'#272734',
+        color_gray:'#919197',
+        color_bg_gray:'#31313e',
+        bg_body:'#20202a'
       },
       fontSize: {
         "11px": "11px",
@@ -127,6 +134,13 @@ module.exports = {
       width: {
         "198px": "198px",
       },
+      translate:{
+        '-17px': "-17px",
+        "-77px":"-77px"
+      },
+      fontFamily:{
+        Poppins:['Poppins']
+      }
     },
   },
   variants: {
