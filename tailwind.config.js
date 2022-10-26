@@ -63,7 +63,9 @@ module.exports = {
         bg_gray_black:'#272734',
         color_gray:'#919197',
         color_bg_gray:'#31313e',
-        bg_body:'#20202a'
+        bg_body:'#20202a',
+        bg_color_form:'#2c2c39',
+        bg_navbar:'#272734'
       },
       fontSize: {
         "11px": "11px",
