@@ -5,8 +5,8 @@ import { faCheck, faXmark } from '@fortawesome/free-solid-svg-icons';
 function PricePlan(){
     return(
     <div>
-             <h1 className="font-bold text-3xl text-slate-100 leading-loose">Price Plans</h1>
-          <div className="grid grid-cols-3 gap-24">
+             <h1 className="font-bold text-3xl text-slate-100 leading-loose pl-10px">Price Plans</h1>
+          <div className="grid grid-cols-3 gap-5 pl-10px">
             <div className="col-span-1 border-0 bg-bg_gray_blue w-72 h-80 p-9">
               <h4 className="text-2xl text-slate-100 font-bold text-center">Starter Price</h4>
               <h1 className=" text-xl size w-56  tracking-wide text-slate-100 leading-8 text-center">

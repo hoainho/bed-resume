@@ -21,8 +21,8 @@ function MyService() {
   ]);
   return (
     <div>
-      <h1 className="font-bold text-3xl text-slate-100 leading-loose">My Services</h1>
-      <div className="grid grid-cols-3 gap-24">
+      <h1 className="font-bold text-3xl text-slate-100 leading-loose pl-10px">My Services</h1>
+      <div className="grid grid-cols-3 pl-10px gap-5">
        {sideBarMyservice.map((item,index)=>(<SideBarMyService key={index} data={item} title={item}  Text={item} button={item} ></SideBarMyService>))}
       </div>
     </div>
