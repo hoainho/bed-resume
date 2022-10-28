@@ -1,22 +1,24 @@
 import * as React from 'react';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Nav from './components/home/nav';
 import NavBarRouter from './components/home/nav/navbarrouter';
-import Contact from './components/contact';
-import NavBarCollapSible from './components/home/nav/navbarcollslap/navbarcollslap';
-import Banner from './components/home/banner';
-import NavBarCollslap from './components/home/nav/navbarcollslap/navbarcollslap';
+import HomePage from './pages/homePage';
 
 
 function App() {
 
  
   return (
-    <div>
-       <Banner></Banner>
-    
-     
+    <div className="grid grid-cols-11  font-poppins ">
+      <div className="col-span-2 min-h-full bg-bg_navbar">
+        <Nav />
+      </div>
+      <div className="col-span-8">
+       <HomePage />
+      </div>
 
+      <div className="col-span-1 min-h-full">
+        <NavBarRouter />
+      </div>
     </div>
   );
 }

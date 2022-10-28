@@ -1,23 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route, } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Banner from './components/home/banner';
 import Contact from './components/contact';
 import Nav from './components/home/nav';
-
+import HomePage from './pages/homePage';
+import NavBarRouter from './components/home/nav/navbarrouter';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App></App>}></Route>
-        <Route path="/home/banner" element={<Banner></Banner>}></Route>
-        <Route path="/contact"  element={<Contact></Contact>}></Route>
-      </Routes>
+      <div className="grid grid-cols-11 font-poppins bg-bg_navbar">
+        <div className="col-span-2 min-h-full">
+          <Nav />
+        </div>
+        <div className="col-span-8">
+          <Routes>
+            <Route path="/" element={<HomePage />}></Route>
+            <Route path="/contact" element={<Contact />}></Route>
+          </Routes>
+        </div>
+        <div className="col-span-1">
+          <NavBarRouter />
+        </div>
+      </div>
     </BrowserRouter>
   </React.StrictMode>
 );

@@ -2,3 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+.collapse-menu {
+    position: relative;
+    width: auto;
+    transition: all 3s ease-out;
+    z-index: 999;
+    height: 100%;
+    right: 0;
+}
+.collapse-menu--active {
+    position: absolute;
+    width: 250px;
+}

@@ -1,0 +1,11 @@
+.collapse-menu {
+    position: relative;
+    width: auto;
+    transition: 0.25s ease-in-out;
+    &--active {
+        position: absolute;
+        right: 0;
+        width: 400px;
+        transition: 0.25s ease-in-out;
+    }
+}
