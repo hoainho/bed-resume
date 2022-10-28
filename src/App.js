@@ -1,9 +1,11 @@
 import * as React from 'react';
-import SignInSide from './components/signInSide';
+import Banner from './components/home/banner';
+
 function App() {
   return (
     <div>
-      <SignInSide />
+      <Banner></Banner>
+     
     </div>
   );
 }
