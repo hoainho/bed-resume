@@ -5,6 +5,7 @@ import NavBarRouter from './components/home/nav/navbarrouter';
 import Contact from './components/contact';
 import NavBarCollapSible from './components/home/nav/navbarcollslap/navbarcollslap';
 import Banner from './components/home/banner';
+import NavBarCollslap from './components/home/nav/navbarcollslap/navbarcollslap';
 
 
 function App() {
@@ -13,7 +14,6 @@ function App() {
   return (
     <div>
        <Banner></Banner>
- 
     
      
 

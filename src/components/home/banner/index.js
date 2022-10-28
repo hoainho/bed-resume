@@ -55,7 +55,7 @@ function Banner() {
 
 
   return (
-    <div className="grid grid-cols-11 grid-flow-col font-poppins">
+    <div className="grid grid-cols-11  font-poppins">
       <div className="col-span-2">
         <Nav></Nav>
       </div>
@@ -148,7 +148,7 @@ function Banner() {
         </div>
       </div>
 
-      <div className="col-span-2">
+      <div className="col-span-1">
         <NavBarRouter></NavBarRouter>
 
       </div>
