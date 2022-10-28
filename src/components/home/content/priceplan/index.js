@@ -7,7 +7,7 @@ function PricePlan(){
     <div>
              <h1 className="font-bold text-3xl text-slate-100 leading-loose">Price Plans</h1>
           <div className="grid grid-cols-3 gap-24">
-            <div className="col-span-1 border-0 bg-bed_text w-72 h-80 p-9">
+            <div className="col-span-1 border-0 bg-bg_gray_blue w-72 h-80 p-9">
               <h4 className="text-2xl text-slate-100 font-bold text-center">Starter Price</h4>
               <h1 className=" text-xl size w-56  tracking-wide text-slate-100 leading-8 text-center">
                 $ <span className="text-yellow-500 text-3xl font-bold leading-8">FREE</span> hour
@@ -44,7 +44,7 @@ function PricePlan(){
               </p>
             </div>
 
-            <div className="col-span-1 border-0 bg-bed_text w-72 h-80 p-9 relative overflow-hidden">
+            <div className="col-span-1 border-0 bg-bg_gray_blue w-72 h-80 p-9 relative overflow-hidden">
               <p className="text-black  text-sm text-center bg-yellow-400 w-28 h-9 flex items-center justify-center rotate-45 top-5 left-52 absolute">
                 POPULAR
               </p>
@@ -80,7 +80,7 @@ function PricePlan(){
                 Order Now &#8594;
               </button>
             </div>
-            <div className="col-span-1 border-0 bg-bed_text w-72 h-80 p-9">
+            <div className="col-span-1 border-0 bg-bg_gray_blue w-72 h-80 p-9">
               <h4 className="text-2xl text-slate-100 font-bold text-center">Full time</h4>
               <h1 className=" text-xl size w-56  tracking-wide text-slate-100 leading-8 text-center">
                 $ <span className="text-yellow-500 text-3xl font-bold leading-8">2999</span> hour
