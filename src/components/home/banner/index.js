@@ -1,31 +1,34 @@
 import { React, useState } from 'react';
+import NavBarRouter from '../nav/navbarrouter';
 import Nav from '../nav';
 import PricePlan from '../content/priceplan';
-import MyService from '../content/myservice';
-import imgbanner from '../../../assets/images/imgbanner.jpg';
+import MyService from'../content/myservice';
 import anhnen1 from '../../../assets/images/anhnen1.jpg';
+import imgslider from '../../../assets/images/imgslider.png';
+import imgslider2 from '../../../assets/images/imgslider2.png';
+import imgavatar from '../../../assets/images/imgavatar-removebg.png';
 import brand from '../../../assets/images/brand.png';
 import studio from '../../../assets/images/studio.png';
 import vintage from '../../../assets/images/viintage.png';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import SliderBanner from './bannersliderbar';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck, faXmark, faStar,faUser,faAt,faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import SliderBanner from './bannersliderbar/bannersliderbar'; 
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+import Footer from '../../footer';
 
 function Banner() {
 
   const [sliderBannerData, setsliderBannerData] = useState([
     {
-      image: anhnen1,
+      image: imgslider,
       author: 'Paul Trueman',
       title: 'Template author',
       text: 'Working with Arthur has been a pleasure. Better yet - I alerted them of a minor issue before going to sleep. The iss ure was fixed the next morning. I could nt ask for better support. Thanks you Arthur! This is easily a 5 star freelancer.',
       font: faStar,
     },
     {
-      image: anhnen1,
+      image: imgslider2,
       author: 'Paul Trueman',
       title: 'Template author',
       text: 'Working with Arthur has been a pleasure. Better yet - I alerted them of a minor issue before going to sleep. The iss ure was fixed the next morning. I could nt ask for better support. Thanks you Arthur! This is easily a 5 star freelancer.',
@@ -47,17 +50,17 @@ function Banner() {
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 2,
-    arrows:false
+    arrows: false
   };
 
+
   return (
-    <div class="grid grid-cols-11 grid-flow-col font-poppins">
-      <div class="col-span-2">
+    <div className="grid grid-cols-11  font-poppins">
+      <div className="col-span-2">
         <Nav></Nav>
       </div>
-      <div class="col-span-8  ">
+      <div className="col-span-8  ">
         <div className=" h-450px bg-bg-img-banner flex items-end bg-cover bg-center">
-          {/* <img src={imgbanner} className="w-full h-full object-cover -z-20 absolute top-0 left-0"></img> */}
           <div className="relative ">
             <div className="grid grid-cols-4 ">
               <div className="col-span-3 px-7 z-2">
@@ -69,7 +72,7 @@ function Banner() {
                 </button>
               </div>
               <div className="col-span-1 z-2">
-                <img src={anhnen1} className="h-auto "></img>
+                <img src={imgavatar} className="h-auto "></img>
               </div>
             </div>
             <div className="bg-slate-400 w-full z-1 opacity-50 h-full border-0 border-bed_text absolute top-0 left-0  "></div>
@@ -121,12 +124,11 @@ function Banner() {
           </div>
           <MyService></MyService>
           <PricePlan></PricePlan>
-          <h1 className="font-bold text-3xl text-slate-100 leading-loose  ">Recommendations</h1>
+          <h1 className="font-bold text-3xl text-slate-100 leading-loose pl-10px ">Recommendations</h1>
 
           <Slider {...settings}>
             {sliderBannerData.map((item, index) => (
               <SliderBanner key={index} data={item} text={item}>
-                {' '}
                 author={item} title{item}
               </SliderBanner>
             ))}
@@ -142,92 +144,16 @@ function Banner() {
             })}
           </div>
 
-          <div>
-            <div className="bg-bg-img-banner h-auto bg-center bg-cover">
-              <h4 className='text-slate-50 text-4xl font-bold ml-24 pt-4'>Contact Information</h4>
-              <div className="grid grid-cols-3 pt-3 pt-11 pl-24">
-                <div className="col-span-1 bg-bg_gray_blue  w-80 h-52 ">
-                  <div className=" flex justify-around leading-60px">
-                    <p className="text-slate-100 font-bold">Country:</p>
-                    <p className="text-color_gray">Canada</p>
-                  </div>
-                  <div className=" flex justify-around leading-60px">
-                    <p className="text-slate-100 font-bold">City:</p>
-                    <p className="text-color_gray">Toronto</p>
-                  </div>
-                  <div className=" flex justify-around leading-60px">
-                    <p className="text-slate-100 font-bold">Street:</p>
-                    <p className="text-color_gray">20 Dell bank Rd</p>
-                  </div>
-                </div>
-                <div className="col-span-1 bg-bg_gray_blue  w-80 h-52">
-                  <div className=" flex leading-60px justify-center">
-                    <p className="text-slate-100 font-bold">Email:</p>
-                    <p className="text-color_gray">Thuong123tvt@gmail.com</p>
-                  </div>
-                  <div className=" flex justify-around leading-60px">
-                    <p className="text-slate-100 font-bold">Telegram:</p>
-                    <p className="text-color_gray">@After</p>
-                  </div>
-                  <div className=" flex justify-around leading-60px">
-                    <p className="text-slate-100 font-bold">Skype:</p>
-                    <p className="text-color_gray">After</p>
-                  </div>
-                </div>
-                <div className="col-span-1 bg-bg_gray_blue  w-80 h-52 pt-3">
-                  <div className="leading-10 pl-3">
-                    <p className="text-slate-100 font-bold">Support : &#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230; </p>
-                  </div>
-                  <div className="leading-10 pl-3 ">
-                    <p className="text-slate-100 font-bold">Service : &#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230; </p>
-                  </div>
-                  <div className=" leading-10 pl-3">
-                    <p className="text-slate-100 font-bold">Office : &#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230; </p>
-                  </div>
-                  <div className=" leading-10 pl-3">
-                    <p className="text-slate-100 font-bold">Personal : &#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230; </p>
-                  </div>
-                </div>
-              </div>
-              <h4 className='text-slate-50 text-2xl font-bold ml-7 pt-4'>Get in touch</h4>
-            </div>
-            <div className='pt-6'>
-
-            <form className='bg-bg_gray h-450px pt-5 padding'>
-              <label className='flex justify-center items-center mb-3'>
-              <div  className='bg-bg_body text-bg_color_form w-20 h-20'>
-                <FontAwesomeIcon icon={faUser} className=' text-4xl translate-x-5 translate-y-5'></FontAwesomeIcon>
-               </div>
-                 <input type="text" name="name" className='w-5/6 h-20 bg-bg_color_form'  />
-              </label>
-              <label className='flex justify-center items-center mb-3'>
-              <div  className='bg-bg_body text-bg_color_form w-20 h-20'>
-                <FontAwesomeIcon icon={faAt} className=' text-4xl translate-x-5 translate-y-5' ></FontAwesomeIcon>
-                </div>
-                 <input type="text" name="email" className='w-5/6 h-20 bg-bg_color_form'  />
-              </label>
-              <label className='flex justify-center items-center mb-3'>
-                <div  className='bg-bg_body text-bg_color_form w-20 h-36'>
-                <FontAwesomeIcon icon={faEnvelope} className=' text-4xl translate-x-5 translate-y-5'></FontAwesomeIcon>
-                </div>
-                 <input type="text" name="text" className='w-5/6 bg-bg_color_form h-36'   />
-              </label>
-                <input type="submit" value="Send Messenger" className='bg-yellow-400 w-72 h-16 text-2xl font-bold text-center translate-x-16 translate-y-2' />
-              </form>
-            </div>
-          </div>
+          <Footer></Footer>
         </div>
       </div>
 
-      <div class="col-span-2">
-        <div className='bg-bg_navbar h-full'>
-          <FontAwesomeIcon icon ={faXmark} className='text-4xl text-gray-400 ml-5 pb-24'></FontAwesomeIcon>
-          <h3 className='text-xl text-slate-50 font-bold ml-5'>Home</h3>
-          <h3 className='text-gray-400 font-bold text-xl ml-5'>Contact</h3>
-          </div>
-        
+      <div className="col-span-1">
+        <NavBarRouter></NavBarRouter>
+
       </div>
     </div>
   );
 }
 export default Banner;
+
